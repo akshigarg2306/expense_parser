@@ -6,3 +6,4 @@ openai
 matplotlib
 pandas
 reportlab
+XlsxWriter
