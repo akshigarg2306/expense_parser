@@ -2,6 +2,7 @@ import streamlit as st
 import os
 import shutil
 from expense_parser_all import main as process_expenses  # import your main function
+import tempfile
 
 # Page config for wider layout
 st.set_page_config(page_title="Expense Parser Tool", layout="wide")
@@ -62,6 +63,9 @@ process_button = st.button("Process")
 # ------------------------------
 if uploaded_files and process_button:
     os.makedirs(output_dir, exist_ok=True)
+
+    # Create a temporary folder for storing uploaded PDFs
+    output_dir = tempfile.mkdtemp()
 
     # Save uploaded files temporarily to output folder
     for pdf in uploaded_files:
