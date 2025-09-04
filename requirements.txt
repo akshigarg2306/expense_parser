@@ -5,3 +5,4 @@ pdfplumber
 openai
 matplotlib
 pandas
+reportlab
