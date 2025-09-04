@@ -453,8 +453,8 @@ def main(pdf_dir_override=None, reports_dir_override=None):
                 print(f"\n📄 Processing file: {f}")
                 logging.info(f"\n📄 Processing file: {f}")
                 BANK_CONFIG = BANK_CONFIGS[bank_name]
-                pdf_path = os.path.join(pdf_dir, f)
-
+                pdf_path = os.path.join(pdf_dir_local, f)
+                print(f"Trying to open PDF: {pdf_path}")  # debug
                 pdf_text = extract_pdf_text(pdf_path, BANK_CONFIG)
                 lines = pdf_text.splitlines()
 
